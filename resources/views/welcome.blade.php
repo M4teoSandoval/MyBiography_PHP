@@ -121,7 +121,7 @@
 
   <header>
     <h1>Keiner Mateo Sandoval Barreto</h1>
-    <p>Estudiante de Ingeniería de Sistemas | 18 años | UNAB - 4° semestre</p>
+    <p>Estudiante de Ingeniería de Sistemas | 18 años | UNAB - 5° semestre</p>
   </header>
 
   <div class="card" id="perfil">
@@ -164,6 +164,19 @@
         </div>
   </div>
 
+  <div class="card" id="actualidad">
+    <div class="section">
+        <h2><span>🚀</span> Actualidad</h2>
+        <div class="divider"></div>
+        <p>
+        Actualmente me dedico a mi formación académica como <strong>estudiante de Ingeniería de Sistemas en la UNAB</strong>.  
+        Estoy en 5° semestre y me apasiona todo lo relacionado con la <strong>programación, el desarrollo de software y la tecnología</strong>.  
+        Además de mis estudios, invierto tiempo en aprender nuevas herramientas, lenguajes y metodologías que me permitan crecer como profesional y destacar en el campo de la ingeniería.  
+        Mi meta es convertirme en un desarrollador integral, capaz de aportar soluciones innovadoras y de alto impacto.
+        </p>
+    </div>
+  </div>
+
 
 
 
@@ -203,6 +216,7 @@
       mostrarAnimado('historia');
       mostrarAnimado('ninez');
       mostrarAnimado('adolescencia');
+      mostrarAnimado('actualidad');
     };
 
     window.addEventListener('scroll', chequearCards);
