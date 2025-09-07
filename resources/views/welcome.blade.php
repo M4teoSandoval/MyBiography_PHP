@@ -215,12 +215,13 @@
             <strong>Educación Secundaria:</strong><br>
             Institución Educativa Técnica Comercial María Inmaculada<br>
             Santa Rosa del Sur, Bolívar<br>
-            Graduado en 2023<br><br>
+            Graduado en 2023.<br><br>
             
-            <strong>Educación Universitaria:</strong><br>
+            <strong>Educación Universitaria: </strong><br>
             Universidad Autónoma de Bucaramanga (UNAB)<br>
             Ingeniería de Sistemas - 5° semestre<br>
-            Actualmente cursando
+            Actualmente cursando.
+            
           </p>
         </div>
       </div>
