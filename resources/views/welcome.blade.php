@@ -178,6 +178,24 @@
   </div>
 
 
+  <div class="card" id="metas">
+    <div class="section">
+        <h2><span>🎯</span> Metas y Aspiraciones</h2>
+        <div class="divider"></div>
+        <p>
+        Aspiro a convertirme en un <strong>profesional destacado en el campo de la Ingeniería de Sistemas</strong>, 
+        desarrollando proyectos innovadores que generen un impacto positivo en la sociedad.  
+        Mis metas incluyen <strong>terminar mi carrera universitaria con excelencia</strong>, 
+        fortalecer mis habilidades en el desarrollo de software, la seguridad informática y la gestión de proyectos, 
+        además de participar en iniciativas que promuevan la tecnología como herramienta de transformación.  
+        A mediano plazo, sueño con trabajar en una empresa reconocida del sector tecnológico o incluso crear mi propio emprendimiento digital, 
+        siempre con el objetivo de crecer como persona y aportar al bienestar de mi familia y comunidad.
+        </p>
+    </div>
+  </div>
+
+
+
 
 
   <footer>
@@ -217,6 +235,7 @@
       mostrarAnimado('ninez');
       mostrarAnimado('adolescencia');
       mostrarAnimado('actualidad');
+      mostrarAnimado('metas');
     };
 
     window.addEventListener('scroll', chequearCards);
