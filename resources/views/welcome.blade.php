@@ -231,7 +231,7 @@
       </div>
     </div>
 
-    <!-- SECCIÓN DE HABILIDADES AGREGADA -->
+    <!-- SECCIÓN DE HABILIDADES -->
     <div class="card visible" id="habilidades">
       <div class="card-header">
         <h2><span>🚀</span> Habilidades</h2>
@@ -244,6 +244,12 @@
             <div class="habilidad">
               <h3><span>💻</span> Desarrollo Web</h3>
               <p>Creación de sitios y aplicaciones web utilizando HTML, CSS y JavaScript. Experiencia en el desarrollo de interfaces responsivas y modernas, con enfoque en la experiencia de usuario.</p>
+            </div>
+            
+            <!-- SEGUNDA HABILIDAD AGREGADA: BASES DE DATOS -->
+            <div class="habilidad">
+              <h3><span>🗃️</span> Bases de Datos</h3>
+              <p>Manejo de sistemas de gestión de bases de datos relacionales como MySQL y PostgreSQL. Diseño de esquemas, consultas SQL avanzadas, optimización y administración de bases de datos.</p>
             </div>
             <!-- Más habilidades se pueden agregar aquí -->
           </div>
