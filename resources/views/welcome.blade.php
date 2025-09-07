@@ -109,7 +109,7 @@
     }
 
     .card.active .card-content {
-      max-height: 1000px;
+      max-height: 1200px; /* Aumenté la altura para las 3 habilidades */
     }
 
     .card.active .card-content-inner {
@@ -153,14 +153,15 @@
       background: rgba(255, 255, 255, 0.1);
       border-radius: 0.8rem;
       padding: 1rem;
-      flex: 1 0 calc(50% - 1rem);
+      flex: 1 0 calc(33.333% - 1rem); /* Cambiado para 3 columnas */
       min-width: 250px;
       border-left: 4px solid #facc15;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .habilidad:hover {
       transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
 
     .habilidad h3 {
@@ -186,6 +187,12 @@
       color: #9ca3af;
     }
 
+    @media (max-width: 900px) {
+      .habilidad {
+        flex: 1 0 calc(50% - 1rem); /* 2 columnas en tablets */
+      }
+    }
+
     @media (max-width: 768px) {
       header h1 {
         font-size: 2rem;
@@ -200,11 +207,11 @@
       }
       
       .card.active .card-content {
-        max-height: 2000px; /* Valor muy alto para móviles */
+        max-height: 2500px; /* Valor más alto para móviles con 3 habilidades */
       }
       
       .habilidad {
-        flex: 1 0 100%;
+        flex: 1 0 100%; /* 1 columna en móviles */
       }
     }
   </style>
@@ -246,10 +253,15 @@
               <p>Creación de sitios y aplicaciones web utilizando HTML, CSS y JavaScript. Experiencia en el desarrollo de interfaces responsivas y modernas, con enfoque en la experiencia de usuario.</p>
             </div>
             
-            <!-- SEGUNDA HABILIDAD AGREGADA: BASES DE DATOS -->
             <div class="habilidad">
               <h3><span>🗃️</span> Bases de Datos</h3>
               <p>Manejo de sistemas de gestión de bases de datos relacionales como MySQL y PostgreSQL. Diseño de esquemas, consultas SQL avanzadas, optimización y administración de bases de datos.</p>
+            </div>
+            
+            <!-- TERCERA HABILIDAD AGREGADA: DESARROLLO MÓVIL ANDROID -->
+            <div class="habilidad">
+              <h3><span>📱</span> Desarrollo Móvil Android</h3>
+              <p>Desarrollo de aplicaciones nativas para Android usando Android Studio, Java y Kotlin. Creación de interfaces de usuario, consumo de APIs REST, y publicación en Google Play Store.</p>
             </div>
             <!-- Más habilidades se pueden agregar aquí -->
           </div>
@@ -298,7 +310,7 @@
             Fue una etapa donde crecí rodeado de amistades, experiencias nuevas y aprendizajes que me ayudaron 
             a fortalecer mi carácter. En este tiempo, empecé a interesarme más por la tecnología, 
             la programación y los retos académicos, siempre buscando destacar y superarme en cada meta 
-            que me proponía.  
+            that me proponía.  
           </p>
         </div>
       </div>
