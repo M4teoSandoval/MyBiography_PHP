@@ -62,8 +62,7 @@
       transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
+    .card:hover {   
       box-shadow: 0 15px 35px rgba(0,0,0,0.4);
     }
 
@@ -150,6 +149,21 @@
         Pasé gran parte de mi niñez compartiendo con mis hermanas, disfrutando de momentos sencillos pero muy significativos que me enseñaron a valorar la unión familiar.</p>
     </div>
   </div>
+
+    <div class="card" id="adolescencia">
+        <div class="section">
+        <h2><span>🌟</span> Mi Adolescencia</h2>
+        <div class="divider"></div>
+        <p>
+            Durante mi adolescencia empecé a descubrir con mayor claridad mis pasiones e intereses. 
+            Fue una etapa donde crecí rodeado de amistades, experiencias nuevas y aprendizajes que me ayudaron 
+            a fortalecer mi carácter. En este tiempo, empecé a interesarme más por la tecnología, 
+            la programación y los retos académicos, siempre buscando destacar y superarme en cada meta 
+            que me proponía.  
+        </p>
+        </div>
+  </div>
+
 
 
 
