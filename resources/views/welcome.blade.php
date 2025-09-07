@@ -92,8 +92,29 @@
       margin: 0;
     }
 
-    .section h2 span {
-      font-size: 1.8rem;
+    .card-header span {
+      font-size: 1.5rem;
+    }
+
+    .card-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.8s ease;
+    }
+
+    .card-content-inner {
+      padding: 0 2rem;
+      opacity: 0;
+      transition: opacity 0.5s ease, padding 0.8s ease;
+    }
+
+    .card.active .card-content {
+      max-height: 1000px;
+    }
+
+    .card.active .card-content-inner {
+      padding: 0 2rem 1.5rem;
+      opacity: 1;
     }
 
     .section p {
