@@ -109,7 +109,7 @@
     }
 
     .card.active .card-content {
-      max-height: 1000px;
+      max-height: 1200px; /* Aumenté la altura para las 3 habilidades */
     }
 
     .card.active .card-content-inner {
@@ -117,24 +117,66 @@
       opacity: 1;
     }
 
-    .section p {
-      color: #f9fafb;
-      font-size: 1.05rem;
-      line-height: 1.6;
+    .card.active .card-header .toggle-icon {
+      transform: rotate(180deg);
+    }
+
+    .toggle-icon {
+      transition: transform 0.3s ease;
+      font-size: 1.5rem;
+      color: #facc15;
     }
 
     .divider {
-      height: 3px;
-      width: 80px;
+      height: 2px;
+      width: 60px;
       background: #facc15;
-      margin: 1rem auto 2rem;
+      margin: 0.8rem 0;
       border-radius: 5px;
-      animation: pulse 2s infinite;
     }
 
-    @keyframes pulse {
-      0%, 100% { transform: scaleX(1); opacity: 0.7; }
-      50% { transform: scaleX(1.5); opacity: 1; }
+    .section p {
+      color: #f9fafb;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* Estilos para habilidades */
+    .habilidades-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .habilidad {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 0.8rem;
+      padding: 1rem;
+      flex: 1 0 calc(33.333% - 1rem); /* Cambiado para 3 columnas */
+      min-width: 250px;
+      border-left: 4px solid #facc15;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .habilidad:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .habilidad h3 {
+      color: #facc15;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .habilidad p {
+      color: #e5e7eb;
+      font-size: 0.95rem;
+      line-height: 1.5;
     }
 
     footer {
@@ -143,6 +185,34 @@
       padding: 1.5rem;
       font-size: 0.9rem;
       color: #9ca3af;
+    }
+
+    @media (max-width: 900px) {
+      .habilidad {
+        flex: 1 0 calc(50% - 1rem); /* 2 columnas en tablets */
+      }
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      
+      .card-header {
+        padding: 1rem;
+      }
+      
+      .card-header h2 {
+        font-size: 1.2rem;
+      }
+      
+      .card.active .card-content {
+        max-height: 2500px; /* Valor más alto para móviles con 3 habilidades */
+      }
+      
+      .habilidad {
+        flex: 1 0 100%; /* 1 columna en móviles */
+      }
     }
   </style>
 </head>
@@ -154,21 +224,63 @@
     <p>Estudiante de Ingeniería de Sistemas | 18 años | UNAB - 5° semestre</p>
   </header>
 
-  <div class="card" id="perfil">
-    <div class="section">
-      <h2><span>👨‍💻</span> Sobre mí</h2>
-      <div class="divider"></div>
-      <p>Soy un apasionado por la tecnología y el desarrollo de soluciones digitales. Me destaco por mi capacidad de aprendizaje, trabajo en equipo y curiosidad constante. Me enfoco en el desarrollo web, bases de datos y programación en distintos lenguajes.</p>
+  <div class="card-container">
+    <div class="card visible" id="perfil">
+      <div class="card-header">
+        <h2><span>👨‍💻</span> Sobre mí</h2>
+        <div class="toggle-icon">▼</div>
+      </div>
+      <div class="card-content">
+        <div class="card-content-inner">
+          <div class="divider"></div>
+          <p>Soy un apasionado por la tecnología y el desarrollo de soluciones digitales. Me destaco por mi capacidad de aprendizaje, trabajo en equipo y curiosidad constante. Me enfoco en el desarrollo web, bases de datos y programación en distintos lenguajes.</p>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="card" id="historia">
-    <div class="section">
-      <h2><span>📖</span> Mi Historia</h2>
-      <div class="divider"></div>
-      <p>Nací en <strong>Santa Rosa del Sur, Bolívar</strong>. Tengo dos hermanas y actualmente soy foráneo, ya que mis padres aún viven en Santa Rosa. Esta experiencia me ha enseñado a ser independiente y valorar más a mi familia.</p>
+    <!-- SECCIÓN DE HABILIDADES -->
+    <div class="card visible" id="habilidades">
+      <div class="card-header">
+        <h2><span>🚀</span> Habilidades</h2>
+        <div class="toggle-icon">▼</div>
+      </div>
+      <div class="card-content">
+        <div class="card-content-inner">
+          <div class="divider"></div>
+          <div class="habilidades-container">
+            <div class="habilidad">
+              <h3><span>💻</span> Desarrollo Web</h3>
+              <p>Creación de sitios y aplicaciones web utilizando HTML, CSS y JavaScript. Experiencia en el desarrollo de interfaces responsivas y modernas, con enfoque en la experiencia de usuario.</p>
+            </div>
+            
+            <div class="habilidad">
+              <h3><span>🗃️</span> Bases de Datos</h3>
+              <p>Manejo de sistemas de gestión de bases de datos relacionales como MySQL y PostgreSQL. Diseño de esquemas, consultas SQL avanzadas, optimización y administración de bases de datos.</p>
+            </div>
+            
+            <!-- TERCERA HABILIDAD AGREGADA: DESARROLLO MÓVIL ANDROID -->
+            <div class="habilidad">
+              <h3><span>📱</span> Desarrollo Móvil Android</h3>
+              <p>Desarrollo de aplicaciones nativas para Android usando Android Studio, Java y Kotlin. Creación de interfaces de usuario, consumo de APIs REST, y publicación en Google Play Store.</p>
+            </div>
+            <!-- Más habilidades se pueden agregar aquí -->
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+
+    <div class="card visible" id="historia">
+      <div class="card-header">
+        <h2><span>📖</span> Mi Historia</h2>
+        <div class="toggle-icon">▼</div>
+      </div>
+      <div class="card-content">
+        <div class="card-content-inner">
+          <div class="divider"></div>
+          <p>Nací en <strong>Santa Rosa del Sur, Bolívar</strong>. Tengo dos hermanas y actualmente soy foráneo, ya que mis padres aún viven en Santa Rosa. Esta experiencia me ha enseñado a ser independiente y valorar más a mi familia.</p>
+        </div>
+      </div>
+    </div>
 
     <div class="card visible" id="ninez">
       <div class="card-header">
@@ -198,10 +310,11 @@
             Fue una etapa donde crecí rodeado de amistades, experiencias nuevas y aprendizajes que me ayudaron 
             a fortalecer mi carácter. En este tiempo, empecé a interesarme más por la tecnología, 
             la programación y los retos académicos, siempre buscando destacar y superarme en cada meta 
-            que me proponía.  
-        </p>
+            that me proponía.  
+          </p>
         </div>
-  </div>
+      </div>
+    </div>
 
     <div class="card visible" id="actualidad">
       <div class="card-header">
