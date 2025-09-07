@@ -92,53 +92,28 @@
       margin: 0;
     }
 
-    .card-header span {
-      font-size: 1.5rem;
-    }
-
-    .card-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.8s ease;
-    }
-
-    .card-content-inner {
-      padding: 0 2rem;
-      opacity: 0;
-      transition: opacity 0.5s ease, padding 0.8s ease;
-    }
-
-    .card.active .card-content {
-      max-height: 1000px;
-    }
-
-    .card.active .card-content-inner {
-      padding: 0 2rem 1.5rem;
-      opacity: 1;
-    }
-
-    .card.active .card-header .toggle-icon {
-      transform: rotate(180deg);
-    }
-
-    .toggle-icon {
-      transition: transform 0.3s ease;
-      font-size: 1.5rem;
-      color: #facc15;
-    }
-
-    .divider {
-      height: 2px;
-      width: 60px;
-      background: #facc15;
-      margin: 0.8rem 0;
-      border-radius: 5px;
+    .section h2 span {
+      font-size: 1.8rem;
     }
 
     .section p {
       color: #f9fafb;
-      font-size: 1rem;
+      font-size: 1.05rem;
       line-height: 1.6;
+    }
+
+    .divider {
+      height: 3px;
+      width: 80px;
+      background: #facc15;
+      margin: 1rem auto 2rem;
+      border-radius: 5px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scaleX(1); opacity: 0.7; }
+      50% { transform: scaleX(1.5); opacity: 1; }
     }
 
     footer {
@@ -147,24 +122,6 @@
       padding: 1.5rem;
       font-size: 0.9rem;
       color: #9ca3af;
-    }
-
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      
-      .card-header {
-        padding: 1rem;
-      }
-      
-      .card-header h2 {
-        font-size: 1.2rem;
-      }
-      
-      .card.active .card-content {
-        max-height: 2000px; /* Valor muy alto para móviles */
-      }
     }
   </style>
 </head>
@@ -176,32 +133,21 @@
     <p>Estudiante de Ingeniería de Sistemas | 18 años | UNAB - 5° semestre</p>
   </header>
 
-  <div class="card-container">
-    <div class="card visible" id="perfil">
-      <div class="card-header">
-        <h2><span>👨‍💻</span> Sobre mí</h2>
-        <div class="toggle-icon">▼</div>
-      </div>
-      <div class="card-content">
-        <div class="card-content-inner">
-          <div class="divider"></div>
-          <p>Soy un apasionado por la tecnología y el desarrollo de soluciones digitales. Me destaco por mi capacidad de aprendizaje, trabajo en equipo y curiosidad constante. Me enfoco en el desarrollo web, bases de datos y programación en distintos lenguajes.</p>
-        </div>
-      </div>
+  <div class="card" id="perfil">
+    <div class="section">
+      <h2><span>👨‍💻</span> Sobre mí</h2>
+      <div class="divider"></div>
+      <p>Soy un apasionado por la tecnología y el desarrollo de soluciones digitales. Me destaco por mi capacidad de aprendizaje, trabajo en equipo y curiosidad constante. Me enfoco en el desarrollo web, bases de datos y programación en distintos lenguajes.</p>
     </div>
+  </div>
 
-    <div class="card visible" id="historia">
-      <div class="card-header">
-        <h2><span>📖</span> Mi Historia</h2>
-        <div class="toggle-icon">▼</div>
-      </div>
-      <div class="card-content">
-        <div class="card-content-inner">
-          <div class="divider"></div>
-          <p>Nací en <strong>Santa Rosa del Sur, Bolívar</strong>. Tengo dos hermanas y actualmente soy foráneo, ya que mis padres aún viven en Santa Rosa. Esta experiencia me ha enseñado a ser independiente y valorar más a mi familia.</p>
-        </div>
-      </div>
+  <div class="card" id="historia">
+    <div class="section">
+      <h2><span>📖</span> Mi Historia</h2>
+      <div class="divider"></div>
+      <p>Nací en <strong>Santa Rosa del Sur, Bolívar</strong>. Tengo dos hermanas y actualmente soy foráneo, ya que mis padres aún viven en Santa Rosa. Esta experiencia me ha enseñado a ser independiente y valorar más a mi familia.</p>
     </div>
+  </div>
 
     <div class="card visible" id="ninez">
       <div class="card-header">
@@ -232,10 +178,9 @@
             a fortalecer mi carácter. En este tiempo, empecé a interesarme más por la tecnología, 
             la programación y los retos académicos, siempre buscando destacar y superarme en cada meta 
             que me proponía.  
-          </p>
+        </p>
         </div>
-      </div>
-    </div>
+  </div>
 
     <div class="card visible" id="actualidad">
       <div class="card-header">
