@@ -57,7 +57,7 @@
       max-width: 900px;
       margin: 3rem auto;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      opacity: 0;
+      
       transform: translateY(50px);
       transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     }
@@ -141,6 +141,18 @@
     </div>
   </div>
 
+  <div class="card" id="ninez">
+    <div class="section">
+        <h2><span>🧒</span> Mi Niñez</h2>
+        <div class="divider"></div>
+        <p>Crecí en <strong>Santa Rosa del Sur, Bolívar</strong>, rodeado de un ambiente tranquilo y familiar.  
+        Desde pequeño aprendí el valor del esfuerzo y el apoyo de mis padres, quienes siempre me motivaron a dar lo mejor de mí.  
+        Pasé gran parte de mi niñez compartiendo con mis hermanas, disfrutando de momentos sencillos pero muy significativos que me enseñaron a valorar la unión familiar.</p>
+    </div>
+  </div>
+
+
+
   <footer>
     © 2025 Keiner Mateo Sandoval Barreto. Todos los derechos reservados.
   </footer>
@@ -159,25 +171,28 @@
       }
     });
 
-    // Animación de entrada
+    // Animación de entrada al hacer scroll
     const mostrarAnimado = (id) => {
       const card = document.getElementById(id);
+      if (!card) return;
+
       const cardTop = card.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
-      if (cardTop < windowHeight - 100) {
+
+      if (cardTop < windowHeight - 50) { 
         card.classList.add('visible');
       }
-    }
+    };
 
-    window.addEventListener('scroll', () => {
+    const chequearCards = () => {
       mostrarAnimado('perfil');
       mostrarAnimado('historia');
-    });
+      mostrarAnimado('ninez');
+      mostrarAnimado('adolescencia');
+    };
 
-    document.addEventListener("DOMContentLoaded", () => {
-      mostrarAnimado('perfil');
-      mostrarAnimado('historia');
-    });
+    window.addEventListener('scroll', chequearCards);
+    document.addEventListener("DOMContentLoaded", chequearCards);
   </script>
 </body>
 </html>
