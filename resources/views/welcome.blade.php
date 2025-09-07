@@ -285,7 +285,7 @@
         <div class="card-content-inner">
           <div class="divider"></div>
           <p>
-            <strong>- Primera experiencia laboral</strong>.<br><strong>- Segunda experiencia laboral</strong>.    
+            <strong>- Primera experiencia laboral</strong>.<br><strong>- Segunda experiencia laboral</strong>.<br><strong>- Tercera experiencia laboral </strong>.       
           </p>
         </div>
       </div>
